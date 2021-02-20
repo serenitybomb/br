@@ -12,31 +12,28 @@
             background-color: #1d1f21;
             margin: 20px;
         }
-
         div#divsupondivs {
             font-family: monospace;
             font-size: 20;
             color: #6c9ef8;
         }
-
         div#fuckyoucss {
             width: 400;
             height: 200;
             margin-left: auto;
             margin-right: auto;
             text-align: center;
-
         }
-
         div#br {
             display: table-cell;
             background-color: #6c9ef8;
             height: inherit;
             width: inherit;
-            border: 5px solid black;
+
             border-radius: 50px;
             font-family: monospace;
             vertical-align: middle;
+            font-size: 25;
         }
     </style>
 </head>
@@ -47,11 +44,13 @@
     </div>
     <div id="fuckyoucss" onmousemove="aaa()">
         <div id="br">
-            <h1>mouse me over to make <br> &lt;br&gt; go brrrr</h1>
+            mouse me over to make <br> &lt;br&gt; go brrrr
         </div>
     </div>
 
     <script>
+        var to;
+
         var stupid = document.querySelector("div#divsupondivs")
 
         function aaa() {
@@ -59,9 +58,21 @@
 
             window.scroll({
                 top: stupid.offsetHeight,
-                left: 100,
                 behavior: 'smooth'
             });
+            document.getElementById("br").innerHTML = "it go brrrr!!!";
+
+            if (to != null) {
+                clearTimeout(to)
+            }
+            to = setTimeout(function() {
+                bbb();
+            }, 400)
+        }
+
+        function bbb() {
+            document.getElementById("br").innerHTML = "mouse me over to make <br> &lt;br&gt; go brrrr";
         }
     </script>
-</body></html>
+</body>
+</html>
