@@ -1,37 +1,68 @@
-## Welcome to GitHub Pages
+<!DOCTYPE>
+<html lang="en">
 
-You can use the [editor on GitHub](https://github.com/serenitybomb/br/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<head>
+<meta charset="utf-8">
+<title>&lt;br&gt; go brrrrr</title>
+<style>
+body{
+background-color: #1d1f21;
+margin: 20px;
+}
+div#divsupondivs {
+font-family: monospace;
+font-size: 20;
+color: #6c9ef8;
+}
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+div#fuckyoucss {
+width: 400;
+height: 200;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
 
-### Markdown
+}
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+div#br {
+display: table-cell;
+background-color: #6c9ef8;
+height: inherit;
+width: inherit;
+border: 5px solid black;
+border-radius: 50px;
+font-family: monospace;
+vertical-align: middle;
+}
 
-```markdown
-Syntax highlighted code block
+</style>
+</head>
 
-# Header 1
-## Header 2
-### Header 3
+<body>
+<div id="divsupondivs">
+&lt;br&gt;
+</div>
+<div id="fuckyoucss" onmousemove="aaa()">
+<div id="br">
+<h1>mouse me over to make <br> &lt;br&gt; go brrrr</h1>
+</div>
+</div>
 
-- Bulleted
-- List
+<script>
+var stupid = document.querySelector("div#divsupondivs")
 
-1. Numbered
-2. List
+function aaa() {
+stupid.innerHTML = stupid.innerHTML + "<br>&lt;br&gt;";
 
-**Bold** and _Italic_ and `Code` text
+window.scroll({
+top: stupid.offsetHeight,
+left: 100,
+behavior: 'smooth'
+});
+}
 
-[Link](url) and ![Image](src)
-```
+</script>
+</body>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/serenitybomb/br/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</html>
